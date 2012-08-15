@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B4FBD1615DBFB0E0051AF77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4FBD1515DBFB0E0051AF77 /* UIKit.framework */; };
+		8B4FBD1815DBFB0E0051AF77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4FBD1715DBFB0E0051AF77 /* Foundation.framework */; };
+		8B4FBD1A15DBFB0E0051AF77 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4FBD1915DBFB0E0051AF77 /* CoreGraphics.framework */; };
+		8B4FBD2015DBFB0E0051AF77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B4FBD1E15DBFB0E0051AF77 /* InfoPlist.strings */; };
+		8B4FBD2215DBFB0E0051AF77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FBD2115DBFB0E0051AF77 /* main.m */; };
+		8B4FBD2615DBFB0E0051AF77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FBD2515DBFB0E0051AF77 /* AppDelegate.m */; };
+		8B4FBD2915DBFB0E0051AF77 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FBD2815DBFB0E0051AF77 /* ViewController.m */; };
+		8B4FBD2C15DBFB0E0051AF77 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4FBD2A15DBFB0E0051AF77 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8B4FBD1115DBFB0E0051AF77 /* VideoStreamingTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoStreamingTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B4FBD1515DBFB0E0051AF77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8B4FBD1715DBFB0E0051AF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8B4FBD1915DBFB0E0051AF77 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8B4FBD1D15DBFB0E0051AF77 /* VideoStreamingTest-Info.plist */ = {isa = PBXFileReference; path = "VideoStreamingTest-Info.plist"; sourceTree = "<group>"; };
+		8B4FBD1F15DBFB0E0051AF77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8B4FBD2115DBFB0E0051AF77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8B4FBD2315DBFB0E0051AF77 /* VideoStreamingTest-Prefix.pch */ = {isa = PBXFileReference; path = "VideoStreamingTest-Prefix.pch"; sourceTree = "<group>"; };
+		8B4FBD2415DBFB0E0051AF77 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		8B4FBD2515DBFB0E0051AF77 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8B4FBD2715DBFB0E0051AF77 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		8B4FBD2815DBFB0E0051AF77 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8B4FBD2B15DBFB0E0051AF77 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B4FBD0E15DBFB0E0051AF77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B4FBD1615DBFB0E0051AF77 /* UIKit.framework in Frameworks */,
+				8B4FBD1815DBFB0E0051AF77 /* Foundation.framework in Frameworks */,
+				8B4FBD1A15DBFB0E0051AF77 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B4FBD0615DBFB0E0051AF77 = {
+			isa = PBXGroup;
+			children = (
+				8B4FBD1B15DBFB0E0051AF77 /* VideoStreamingTest */,
+				8B4FBD1415DBFB0E0051AF77 /* Frameworks */,
+				8B4FBD1215DBFB0E0051AF77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B4FBD1215DBFB0E0051AF77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B4FBD1115DBFB0E0051AF77 /* VideoStreamingTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B4FBD1415DBFB0E0051AF77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B4FBD1515DBFB0E0051AF77 /* UIKit.framework */,
+				8B4FBD1715DBFB0E0051AF77 /* Foundation.framework */,
+				8B4FBD1915DBFB0E0051AF77 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B4FBD1B15DBFB0E0051AF77 /* VideoStreamingTest */ = {
+			isa = PBXGroup;
+			children = (
+				8B4FBD2415DBFB0E0051AF77 /* AppDelegate.h */,
+				8B4FBD2515DBFB0E0051AF77 /* AppDelegate.m */,
+				8B4FBD2715DBFB0E0051AF77 /* ViewController.h */,
+				8B4FBD2815DBFB0E0051AF77 /* ViewController.m */,
+				8B4FBD2A15DBFB0E0051AF77 /* ViewController.xib */,
+				8B4FBD1C15DBFB0E0051AF77 /* Supporting Files */,
+			);
+			path = VideoStreamingTest;
+			sourceTree = "<group>";
+		};
+		8B4FBD1C15DBFB0E0051AF77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B4FBD1D15DBFB0E0051AF77 /* VideoStreamingTest-Info.plist */,
+				8B4FBD1E15DBFB0E0051AF77 /* InfoPlist.strings */,
+				8B4FBD2115DBFB0E0051AF77 /* main.m */,
+				8B4FBD2315DBFB0E0051AF77 /* VideoStreamingTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B4FBD1015DBFB0E0051AF77 /* VideoStreamingTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B4FBD2F15DBFB0E0051AF77 /* Build configuration list for PBXNativeTarget "VideoStreamingTest" */;
+			buildPhases = (
+				8B4FBD0D15DBFB0E0051AF77 /* Sources */,
+				8B4FBD0E15DBFB0E0051AF77 /* Frameworks */,
+				8B4FBD0F15DBFB0E0051AF77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VideoStreamingTest;
+			productName = VideoStreamingTest;
+			productReference = 8B4FBD1115DBFB0E0051AF77 /* VideoStreamingTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B4FBD0815DBFB0E0051AF77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 8B4FBD0B15DBFB0E0051AF77 /* Build configuration list for PBXProject "VideoStreamingTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8B4FBD0615DBFB0E0051AF77;
+			productRefGroup = 8B4FBD1215DBFB0E0051AF77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B4FBD1015DBFB0E0051AF77 /* VideoStreamingTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B4FBD0F15DBFB0E0051AF77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B4FBD2015DBFB0E0051AF77 /* InfoPlist.strings in Resources */,
+				8B4FBD2C15DBFB0E0051AF77 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B4FBD0D15DBFB0E0051AF77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B4FBD2215DBFB0E0051AF77 /* main.m in Sources */,
+				8B4FBD2615DBFB0E0051AF77 /* AppDelegate.m in Sources */,
+				8B4FBD2915DBFB0E0051AF77 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8B4FBD1E15DBFB0E0051AF77 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B4FBD1F15DBFB0E0051AF77 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8B4FBD2A15DBFB0E0051AF77 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B4FBD2B15DBFB0E0051AF77 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B4FBD2D15DBFB0E0051AF77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		8B4FBD2E15DBFB0E0051AF77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B4FBD3015DBFB0E0051AF77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VideoStreamingTest/VideoStreamingTest-Prefix.pch";
+				INFOPLIST_FILE = "VideoStreamingTest/VideoStreamingTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8B4FBD3115DBFB0E0051AF77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VideoStreamingTest/VideoStreamingTest-Prefix.pch";
+				INFOPLIST_FILE = "VideoStreamingTest/VideoStreamingTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B4FBD0B15DBFB0E0051AF77 /* Build configuration list for PBXProject "VideoStreamingTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B4FBD2D15DBFB0E0051AF77 /* Debug */,
+				8B4FBD2E15DBFB0E0051AF77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B4FBD2F15DBFB0E0051AF77 /* Build configuration list for PBXNativeTarget "VideoStreamingTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B4FBD3015DBFB0E0051AF77 /* Debug */,
+				8B4FBD3115DBFB0E0051AF77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B4FBD0815DBFB0E0051AF77 /* Project object */;
+}
