@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#import "Seedr.h"
 
 @implementation AppDelegate
 
@@ -24,11 +25,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+//    [Flurry startSession:@"4TB8JWCNRZTN438YCDHM"];
+    [[Seedr instance] startSessionWithApiKey:@"testKey"];
+    
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    
+    [[Seedr instance] initialize:self.viewController];
+    [[Seedr instance] requestAdForSpace:@"anySpace"];
+    [[Seedr instance] setDelegate:self];
+    [Seedr instance].showReward = YES;
+    [Seedr instance].supportdedOrientations = [NSMutableArray arrayWithObjects:[NSNumber numberWithInt:UIInterfaceOrientationPortrait], nil];
+    [Seedr instance].rewardImage = [UIImage imageNamed:@"cocos2d"];
+    [Seedr instance].rewardText = @"Скидка 50% на грузовое судно типа 499-24е52 \"Неутомимый афроамериканец\" в салонах \"КосмСтройТехСбыт\"!\nТолько в пределах Солнечной системы.";
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+    
     return YES;
 }
 
@@ -36,6 +51,12 @@
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+}
+void uncaughtExceptionHandler(NSException *exception)
+{
+    NSLog(@"CRASH: %@", exception);
+    NSLog(@"Stack Trace: %@", [exception callStackSymbols]);
+    // Internal error reporting
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
@@ -58,5 +79,22 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark - SeedrDelegate
+
+- (void)adWillPresent:(NSString *)networkName
+{}
+
+- (void)adWillDismiss:(NSString *)networkName
+{}
+
+- (void)adDidDismiss
+{}
+
+- (void)rewardForSpace:(NSString *)space
+{}
+
+- (void)onReceivedAdForSpace:(NSString*)space
+{}
 
 @end

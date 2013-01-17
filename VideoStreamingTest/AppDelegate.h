@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+//#import "SeedrDelegate.h"
 
 @class ViewController;
+@protocol  SeedrDelegate;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate, SeedrDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "VideoViewController.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    [self.view setFrame:[UIScreen mainScreen].bounds];
+    
+    VideoViewController* vvc = [[VideoViewController alloc] init];
+    [self.view addSubview:vvc.view];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -28,7 +36,22 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
+    // Return YES for supported orientations
+	return interfaceOrientation == UIInterfaceOrientationPortrait;//	return YES;
+	
+	// Unsupported orientations:
+	// UIInterfaceOrientationPortrait, UIInterfaceOrientationPortraitUpsideDown
+	return NO;
+}
+
+- (BOOL)shouldAutorotate
+{
     return YES;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end
