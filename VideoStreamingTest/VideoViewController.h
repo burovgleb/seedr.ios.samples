@@ -12,6 +12,7 @@
 {
     IBOutlet UILabel *_label;
     UIWebView* wv;
+    IBOutlet UISwitch *_switcher;
 }
 
 @property (nonatomic,retain)MPMoviePlayerViewController* moviePlayerViewController;

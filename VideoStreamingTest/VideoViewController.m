@@ -7,9 +7,7 @@
 //
 
 #import "VideoViewController.h"
-#import "ViewController.h"
 #import "Seedr.h"
-#import "HCYoutubeParser.h"
 
 @interface VideoViewController ()
 
@@ -49,9 +47,9 @@
 
 - (void)showAd
 {
-    if ([[Seedr instance] isAdAvailableForSpace:@"anySpace"])
+    if ([[Seedr instance] isAdAvailableForSpace:SEEDR_DEFAULTSPACE])
     {
-        [[Seedr instance] showAdForSpace:@"anySpace" presentType:SeedrPresentTypeCustom];
+        [[Seedr instance] showAdForSpace:SEEDR_DEFAULTSPACE presentType:SeedrPresentTypeCustom];
     }
 }
 
@@ -86,6 +84,8 @@
 {
     [_label release];
     _label = nil;
+    [_switcher release];
+    _switcher = nil;
     [super viewDidUnload];
 
     
@@ -124,6 +124,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     self.moviePlayerViewController = nil;
     [_label release];
+    [_switcher release];
     [super dealloc];
 }
 
@@ -134,7 +135,7 @@
 //    NSDictionary *qualities = [HCYoutubeParser h264videosWithYoutubeURL:url];
 //    NSURL* _urlToLoad = [NSURL URLWithString:[qualities objectForKey:@"medium"]];
 //    [self playVideo:_urlToLoad];
-    
+    [Seedr instance].showReward = _switcher.on;
     [self showAd];
     
 }

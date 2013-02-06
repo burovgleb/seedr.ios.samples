@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 //#import "SeedrDelegate.h"
 
-@class ViewController;
+@class VideoViewController;
 @protocol  SeedrDelegate;
 
 
@@ -17,6 +17,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) VideoViewController *viewController;
 
 @end

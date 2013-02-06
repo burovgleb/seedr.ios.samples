@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "ViewController.h"
+#import "VideoViewController.h"
 #import "Seedr.h"
 
 @implementation AppDelegate
@@ -25,14 +25,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//    [Flurry startSession:@"4TB8JWCNRZTN438YCDHM"];
     [[Seedr instance] startSessionWithApiKey:@"testKey"];
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
+    self.viewController = [[[VideoViewController alloc] initWithNibName:@"VideoViewController" bundle:nil] autorelease];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+    
+    
     
     
     [[Seedr instance] initialize:self.viewController];
@@ -42,7 +44,9 @@
     [Seedr instance].supportdedOrientations = [NSMutableArray arrayWithObjects:[NSNumber numberWithInt:UIInterfaceOrientationPortrait], nil];
     [Seedr instance].rewardImage = [UIImage imageNamed:@"cocos2d"];
     [Seedr instance].rewardText = @"Скидка 50% на грузовое судно типа 499-24е52 \"Неутомимый афроамериканец\" в салонах \"КосмСтройТехСбыт\"!\nТолько в пределах Солнечной системы.";
-    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+    
+    
+    
     
     return YES;
 }
@@ -82,13 +86,13 @@ void uncaughtExceptionHandler(NSException *exception)
 
 #pragma mark - SeedrDelegate
 
-- (void)adWillPresent:(NSString *)networkName
+- (void)adWillPresent:(NSString *)space
 {}
 
-- (void)adWillDismiss:(NSString *)networkName
+- (void)adWillDismiss:(NSString *)space
 {}
 
-- (void)adDidDismiss
+- (void)adDidDismiss:(NSString *)space
 {}
 
 - (void)rewardForSpace:(NSString *)space
