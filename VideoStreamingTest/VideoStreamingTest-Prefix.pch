@@ -12,4 +12,12 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #import <MediaPlayer/MediaPlayer.h>
+
+//UIInterfaceOrientationLandscapeLeft
+//UIInterfaceOrientationPortrait
+//UIInterfaceOrientationMaskPortrait
+//UIInterfaceOrientationMaskLandscape
+
+#define CurrentUIInterfaceOrientation UIInterfaceOrientationPortrait
+#define CurrentUIInterfaceOrientationMask UIInterfaceOrientationMaskPortrait
 #endif

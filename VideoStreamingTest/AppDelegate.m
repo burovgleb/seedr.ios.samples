@@ -40,8 +40,8 @@
     [[Seedr instance] initialize:self.viewController];
     [[Seedr instance] requestAdForSpace:@"anySpace"];
     [[Seedr instance] setDelegate:self];
-    [Seedr instance].showReward = YES;
-    [Seedr instance].supportdedOrientations = [NSMutableArray arrayWithObjects:[NSNumber numberWithInt:UIInterfaceOrientationPortrait], nil];
+    [Seedr instance].showReward = NO;
+    [Seedr instance].supportdedOrientations = [NSMutableArray arrayWithObjects:[NSNumber numberWithInt:CurrentUIInterfaceOrientation], nil];
     [Seedr instance].rewardImage = [UIImage imageNamed:@"cocos2d"];
     [Seedr instance].rewardText = @"Скидка 50% на грузовое судно типа 499-24е52 \"Неутомимый афроамериканец\" в салонах \"КосмСтройТехСбыт\"!\nТолько в пределах Солнечной системы.";
     

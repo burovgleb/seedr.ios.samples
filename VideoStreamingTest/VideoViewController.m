@@ -95,17 +95,17 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-	return interfaceOrientation == UIInterfaceOrientationPortrait;;
+	return YES;// interfaceOrientation == UIInterfaceOrientationPortrait;;
 }
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
 {
-    return UIInterfaceOrientationPortrait;
+    return CurrentUIInterfaceOrientation;
 }
 
 - (BOOL)shouldAutorotate
 {
-    return NO;
+    return YES;
     UIInterfaceOrientation orientation = [[UIDevice currentDevice] orientation];
     
     if (UIInterfaceOrientationIsPortrait(orientation)) {
@@ -116,7 +116,7 @@
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationMaskPortrait;
+    return CurrentUIInterfaceOrientationMask;
 }
 
 - (void)dealloc
