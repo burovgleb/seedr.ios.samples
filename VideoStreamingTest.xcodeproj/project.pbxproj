@@ -292,7 +292,7 @@
 				GCC_PREFIX_HEADER = "VideoStreamingTest/VideoStreamingTest-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Seedr/Seedr\"";
 				INFOPLIST_FILE = "VideoStreamingTest/VideoStreamingTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -302,7 +302,7 @@
 				PRODUCT_NAME = VideoStreamingTest;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -316,7 +316,7 @@
 				GCC_PREFIX_HEADER = "VideoStreamingTest/VideoStreamingTest-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Seedr/Seedr\"";
 				INFOPLIST_FILE = "VideoStreamingTest/VideoStreamingTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -326,7 +326,7 @@
 				PRODUCT_NAME = VideoStreamingTest;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

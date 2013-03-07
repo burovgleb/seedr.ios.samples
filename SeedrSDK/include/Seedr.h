@@ -11,6 +11,9 @@
 
 #define SEEDR_DEFAULTSPACE @"SEEDR_DEFAULTSPACE"
 
+#define SEEDR_GENDER_MALE @"M"
+#define SEEDR_GENDER_FEMALE @"F"
+
 enum {
     SeedrPresentTypeModal,
     SeedrPresentTypeCustom,
@@ -47,6 +50,11 @@ typedef int SeedrPresentType;
 @property (nonatomic, assign)BOOL showReward;
 @property (nonatomic, retain)UIImage* rewardImage;
 @property (nonatomic, retain)NSString* rewardText;
+@property (nonatomic, assign)BOOL testAdsEnabled;
+
+@property (nonatomic, retain)NSString* userID;
+@property (nonatomic, assign)int age;
+@property (nonatomic, retain)NSString* gender;
 
 + (Seedr*)instance;
 + (NSString *)seedrVersion;
