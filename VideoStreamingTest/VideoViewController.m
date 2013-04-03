@@ -47,9 +47,9 @@
 
 - (void)showAd
 {
-    if ([[Seedr instance] isAdAvailableForSpace:SEEDR_DEFAULTSPACE])
+    if ([[Seedr instance] isAdAvailableForSpace:nil])
     {
-        [[Seedr instance] showAdForSpace:SEEDR_DEFAULTSPACE presentType:SeedrPresentTypeCustom];
+        [[Seedr instance] showAdForSpace:nil presentType:SeedrPresentTypeCustom];
     }
 }
 

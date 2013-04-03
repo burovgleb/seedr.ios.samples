@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#define SEEDR_DEFAULTSPACE @"SEEDR_DEFAULTSPACE"
-
 #define SEEDR_GENDER_MALE @"M"
 #define SEEDR_GENDER_FEMALE @"F"
 
@@ -25,41 +23,48 @@ typedef int SeedrPresentType;
 
 @protocol SeedrDelegate <NSObject>
 
+- (void)onSessionStarted;
+
 - (void)adWillPresent:(NSString *)space;
 - (void)adWillDismiss:(NSString *)space;
 - (void)adDidDismiss:(NSString *)space;
 - (void)rewardForSpace:(NSString *)space;
 - (void)onReceivedAdForSpace:(NSString*)space;
+- (void)onAdRemovedForSace:(NSString*)space;
+- (BOOL)shouldRemovedForSace:(NSString*)space;
 
 @end
 
 @interface Seedr : NSObject
-{
-    @private
-    NSString* _myId;
-    NSString* _apikey;
-    NSMutableDictionary* _ads;
-    UIViewController* _rootViewController;
-    SeedrView* _presentView;
-    
-    NSMutableArray* actions;
-}
 
+//Set seedr delegate to track handle events
 @property (nonatomic, assign)id<SeedrDelegate> delegate;
+//Set supported interface oriantations
 @property (nonatomic, retain)NSArray* supportdedOrientations;
+//Allow seedr to show reward message
 @property (nonatomic, assign)BOOL showReward;
+//Set reward image
 @property (nonatomic, retain)UIImage* rewardImage;
+//Set reward text
 @property (nonatomic, retain)NSString* rewardText;
+//Enable or diable test ads
 @property (nonatomic, assign)BOOL testAdsEnabled;
 
+//Set your user's id
 @property (nonatomic, retain)NSString* userID;
-@property (nonatomic, assign)int age;
+//Set your user's age
+@property (nonatomic, assign)NSNumber* age;
+//Set your user's gender. Allowable values are @"M" or @"F"
 @property (nonatomic, retain)NSString* gender;
 
+//Shared seedr instance
+//Note - you dont need to create yor own seedr instance
 + (Seedr*)instance;
+//Returns current seedr version
 + (NSString *)seedrVersion;
+- (BOOL)isSessionStarted;
 
-- (void)startSessionWithApiKey:(NSString*)key;
+- (void)startSessionWithApiKey:(NSString*)apiKey;
 - (void)initialize:(UIViewController*)rootViewControllerOrNil;
 
 - (void)requestAdForSpace:(NSString*)space;
