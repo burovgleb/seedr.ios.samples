@@ -36,10 +36,10 @@ Try the sample project available on GitHub demonstrates a technique for building
 Coming soon.
 
 ####  Note
->For most actual information see [Seedr oficaial web page](http://seedr.ru/)
+>For adding new app contact Seedr at hello@seedr.ru
 
 <br>
-###  Step 4. Configure a your Project
+###  Step 5. Configure a your Project
 
 You need to add Seedr library and its header files to your project to get acces to Seedr. 
 First you need is open Project Navigator in your XCode project and open Seedr SDK folder with Finder.
@@ -56,7 +56,7 @@ Choose 'Create groups for any added folders'. There is no matter for you in enab
 ![](https://s3-eu-west-1.amazonaws.com/static.seedr.ru/ios-step-3.png)
 
 <br>
-###  Step 5. Initialize Seedr
+###  Step 6. Initialize Seedr
 
 
 Incorporate the following two lines of Seedr code: 
