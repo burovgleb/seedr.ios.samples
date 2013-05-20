@@ -41,6 +41,9 @@
     
     [[Seedr instance] initialize:self.viewController];
     [Seedr  instance].testAdsEnabled = YES;
+    [Seedr instance].age = @(26);
+    [Seedr instance].userID = @"parampampam";
+    [Seedr instance].gender = @"F";
     [[Seedr instance] requestAdForSpace:nil];
     [[Seedr instance] setDelegate:self];
     [Seedr instance].showReward = NO;
