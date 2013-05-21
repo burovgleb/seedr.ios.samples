@@ -12,10 +12,15 @@
 {
     IBOutlet UILabel *_label;
     UIWebView* wv;
+    
     IBOutlet UISwitch *_switcher;
+    IBOutlet UISegmentedControl *_segmentsGender;
+    IBOutlet UITextField *_textAge;
+    IBOutlet UITextField *_textUserId;
 }
 
 @property (nonatomic,retain)MPMoviePlayerViewController* moviePlayerViewController;
 - (IBAction)onButton:(id)sender;
+- (IBAction)onApply:(id)sender;
 
 @end

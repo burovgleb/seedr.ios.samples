@@ -86,6 +86,12 @@
     _label = nil;
     [_switcher release];
     _switcher = nil;
+    [_segmentsGender release];
+    _segmentsGender = nil;
+    [_textAge release];
+    _textAge = nil;
+    [_textUserId release];
+    _textUserId = nil;
     [super viewDidUnload];
 
     
@@ -125,18 +131,26 @@
     self.moviePlayerViewController = nil;
     [_label release];
     [_switcher release];
+    [_segmentsGender release];
+    [_textAge release];
+    [_textUserId release];
     [super dealloc];
 }
 
 - (IBAction)onButton:(id)sender
 {
-//    NSURL *url = [NSURL URLWithString:@"http://www.youtube.com/watch?v=67L20-tBBG0"];
-//    //_activityIndicator.hidden = NO;
-//    NSDictionary *qualities = [HCYoutubeParser h264videosWithYoutubeURL:url];
-//    NSURL* _urlToLoad = [NSURL URLWithString:[qualities objectForKey:@"medium"]];
-//    [self playVideo:_urlToLoad];
     [Seedr instance].showReward = _switcher.on;
     [self showAd];
-    
 }
+
+- (IBAction)onApply:(id)sender
+{
+    int age = [_textAge.text intValue];
+    if (age != 0)
+        [Seedr instance].age = @(age);
+    if (_textUserId.text.length > 0)
+        [Seedr instance].userID = _textUserId.text;
+    [Seedr instance].gender = _segmentsGender.selectedSegmentIndex == 0?@"M":@"F";
+}
+
 @end
