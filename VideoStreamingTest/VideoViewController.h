@@ -22,5 +22,6 @@
 @property (nonatomic,retain)MPMoviePlayerViewController* moviePlayerViewController;
 - (IBAction)onButton:(id)sender;
 - (IBAction)onApply:(id)sender;
+- (IBAction)onBackground:(id)sender;
 
 @end

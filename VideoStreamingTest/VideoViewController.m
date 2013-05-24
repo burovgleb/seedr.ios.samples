@@ -151,6 +151,14 @@
     if (_textUserId.text.length > 0)
         [Seedr instance].userID = _textUserId.text;
     [Seedr instance].gender = _segmentsGender.selectedSegmentIndex == 0?@"M":@"F";
+    
+    [self onBackground:nil];
+}
+
+- (IBAction)onBackground:(id)sender
+{
+    [_textAge resignFirstResponder];
+    [_textUserId resignFirstResponder];
 }
 
 @end
