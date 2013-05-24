@@ -8,6 +8,7 @@
 
 #import "VideoViewController.h"
 #import "Seedr.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface VideoViewController ()
 
@@ -159,6 +160,11 @@
 {
     [_textAge resignFirstResponder];
     [_textUserId resignFirstResponder];
+}
+
+- (IBAction)onRequestLoaction:(id)sender
+{
+    [[CLLocationManager new] startUpdatingLocation];
 }
 
 @end

@@ -23,5 +23,6 @@
 - (IBAction)onButton:(id)sender;
 - (IBAction)onApply:(id)sender;
 - (IBAction)onBackground:(id)sender;
+- (IBAction)onRequestLoaction:(id)sender;
 
 @end
