@@ -72,7 +72,13 @@ typedef int SeedrPresentType;
 - (void)removeAdFromSpace:(NSString*)spaceOrNil;
 - (BOOL)isAdAvailableForSpace:(NSString*)spaceOrNil;
 
+//creates a view which you can directly attach to any existing view
+//to show video without modal dialog with compatible size
+//params
+//spaceOrNil - space of video
+//sz - suitable size for view
 - (UIView*)createVideoViewForSpace:(NSString*)spaceOrNil size:(CGSize)sz;
+//destroys view which was created by createVideoViewForSpace:size: mathod,
 - (void)destroyCurrentView;
 
 @end
