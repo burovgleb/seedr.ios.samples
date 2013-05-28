@@ -72,4 +72,7 @@ typedef int SeedrPresentType;
 - (void)removeAdFromSpace:(NSString*)spaceOrNil;
 - (BOOL)isAdAvailableForSpace:(NSString*)spaceOrNil;
 
+- (UIView*)createVideoViewForSpace:(NSString*)spaceOrNil size:(CGSize)sz;
+- (void)destroyCurrentView;
+
 @end
