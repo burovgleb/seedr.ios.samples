@@ -14,9 +14,14 @@
     UIWebView* wv;
     
     IBOutlet UISwitch *_switcher;
+    IBOutlet UISwitch *_switcherSeparate;
     IBOutlet UISegmentedControl *_segmentsGender;
     IBOutlet UITextField *_textAge;
     IBOutlet UITextField *_textUserId;
+    IBOutlet UIView *_viewSeparate;
+    IBOutlet UIView *_viewScrollContent;
+    IBOutlet UIScrollView *_scroll;
+    IBOutlet UIButton *_buttonDestroy;
 }
 
 @property (nonatomic,retain)MPMoviePlayerViewController* moviePlayerViewController;
@@ -24,5 +29,6 @@
 - (IBAction)onApply:(id)sender;
 - (IBAction)onBackground:(id)sender;
 - (IBAction)onRequestLoaction:(id)sender;
+- (IBAction)onDestroy:(id)sender;
 
 @end

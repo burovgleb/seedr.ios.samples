@@ -18,6 +18,10 @@
 //UIInterfaceOrientationMaskPortrait
 //UIInterfaceOrientationMaskLandscape
 
+#define ANIM_LENGTH 0.25
+#define ANIM_CURVE UIViewAnimationCurveEaseInOut
+#define ANIM_KCURVE UIViewAnimationCurveEaseOut
+
 #define CurrentUIInterfaceOrientation UIInterfaceOrientationPortrait
 #define CurrentUIInterfaceOrientationMask UIInterfaceOrientationMaskPortrait
 #endif

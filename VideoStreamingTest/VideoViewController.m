@@ -10,6 +10,9 @@
 #import "Seedr.h"
 #import <CoreLocation/CoreLocation.h>
 
+#define scrollminh self.view.frame.size.height - 216
+#define scrollmaxh self.view.frame.size.height
+
 @interface VideoViewController ()
 
 @end
@@ -27,23 +30,51 @@
     return self;
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
-    [self.view setFrame:[UIScreen mainScreen].bounds];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(playbackStateDidChange:)
-                                                 name:@"MPAVControllerPlaybackStateChangedNotification"
-                                               object:nil];
+    CGRect r = [UIScreen mainScreen].bounds;
+    r.origin = CGPointMake(0, 0);
+    [self.view setFrame:r];
+    //[_viewScrollContent setFrame:r];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(logNotify:)
-                                                 name:nil
-                                               object:nil];
+    [_scroll addSubview:_viewScrollContent];
+    [_scroll setContentSize:_viewScrollContent.frame.size];
     
-    //[self performSelector:@selector(showAd) withObject:nil afterDelay:1];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onKeyboardShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onKeyboardHide:) name:UIKeyboardWillHideNotification object:nil];
     
+    [_scroll setScrollEnabled:YES];
+    _scroll.frame = r;
+}
 
+- (void)onKeyboardShow:(NSNotification*)notify
+{
+    [self setScrollMinimal];
+}
+
+- (void)onKeyboardHide:(NSNotification*)notify
+{
+    [self setScrollMaximum];
+}
+
+- (void)setScrollMinimal
+{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:ANIM_LENGTH];
+    [UIView setAnimationCurve:ANIM_KCURVE];
+    [_scroll setFrame:CGRectMake(0, 0, self.view.frame.size.width, scrollminh)];
+    [UIView commitAnimations];
+}
+
+- (void)setScrollMaximum
+{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:ANIM_LENGTH];
+    [UIView setAnimationCurve:ANIM_KCURVE];
+    [_scroll setFrame:CGRectMake(0, 0, self.view.frame.size.width, scrollmaxh)];
+    [UIView commitAnimations];
 }
 
 - (void)showAd
@@ -93,6 +124,16 @@
     _textAge = nil;
     [_textUserId release];
     _textUserId = nil;
+    [_switcherSeparate release];
+    _switcherSeparate = nil;
+    [_viewSeparate release];
+    _viewSeparate = nil;
+    [_viewScrollContent release];
+    _viewScrollContent = nil;
+    [_scroll release];
+    _scroll = nil;
+    [_buttonDestroy release];
+    _buttonDestroy = nil;
     [super viewDidUnload];
 
     
@@ -135,13 +176,31 @@
     [_segmentsGender release];
     [_textAge release];
     [_textUserId release];
+    [_switcherSeparate release];
+    [_viewSeparate release];
+    [_viewScrollContent release];
+    [_scroll release];
+    [_buttonDestroy release];
     [super dealloc];
 }
 
 - (IBAction)onButton:(id)sender
 {
-    [Seedr instance].showReward = _switcher.on;
-    [self showAd];
+    if (_viewSeparate.subviews.count != 0) 
+        return;
+    
+    if (_switcherSeparate.on)
+    {
+        _buttonDestroy.enabled = YES;
+        
+        [_viewSeparate addSubview:[[Seedr instance] createVideoViewForSpace:nil size:_viewSeparate.frame.size]];
+        
+    }
+    else
+    {
+        [Seedr instance].showReward = _switcher.on;
+        [self showAd];
+    }
 }
 
 - (IBAction)onApply:(id)sender
@@ -165,6 +224,13 @@
 - (IBAction)onRequestLoaction:(id)sender
 {
     [[CLLocationManager new] startUpdatingLocation];
+}
+
+- (IBAction)onDestroy:(id)sender
+{
+    [[_viewSeparate.subviews objectAtIndex:0] removeFromSuperview];
+    [[Seedr instance] destroyCurrentView];
+    _buttonDestroy.enabled = NO;
 }
 
 @end
